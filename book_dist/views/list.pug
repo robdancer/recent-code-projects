@@ -1,0 +1,28 @@
+extends layout
+
+block content
+    h1= title
+    a(href='../').backbtn Back
+    table
+        each title in titles
+            tr
+                -if (title.isDirectory())
+                    td.icon
+                        img(src='/images/folder-black-18dp.svg')
+                    td.folder 
+                        a(href=(title.name+'/')) #{title.name}
+                -else
+                    td.icon 
+                        img(src='/images/description-black-18dp.svg')
+                    td.file
+                        a(href=title.name) #{title.name}
+
+
+block footer
+    .footer
+        a(href='#' onclick='signout()') Sign out
+        script.
+            function signout() {
+                document.cookie = "loggedin= ; expires = Thu, 01 Jan 1970 00:00:00 GMT ; path=/;";
+                window.location.href = '/';
+            }

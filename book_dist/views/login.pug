@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1= title
+  p Login to access content
+  br
+  form(method='POST')
+    label(for='password') Please enter password
+    br
+    input#password(type='text' name='password')
+    br
+    br
+    button(type='submit') Enter
+    br
+    p= fail ? 'Incorrect password' : ''
+
+block footer
+    script.
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }

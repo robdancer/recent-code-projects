@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  link(href='https://fonts.googleapis.com/css?family=Charmonman' rel='stylesheet')
+  h1(style="font-family: Charmonman") Uh oh error alert
+  h3(style="font-family: Charmonman") Good luck
+  h1= message
+  h2= error.status
+  pre #{error.stack}

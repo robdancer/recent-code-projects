@@ -1,0 +1,32 @@
+body {
+  padding: 50px;
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #1a0dab;
+  text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 25px;
+}
+
+.backbtn {
+  margin: 10px 0px;
+  display: inline-block;
+}
+
+table .file, .folder {
+  height: 30px;
+}
+
+table .icon {
+  text-align: right;
+  width: 30px;
+  padding-right: 15px;
+}
